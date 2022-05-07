@@ -27,6 +27,7 @@
   padding-top: 30px;
   padding-bottom: 80px;
   height: 90%;
+  border-radius: 10px;
 }
 
 .Spaces .mat-form-field + .mat-form-field{
@@ -36,7 +37,7 @@
 }
 
 .widthforBox {
-  width: 90%;
+  width: 83%;
 }
 .topMarginUserBox
 {
@@ -83,7 +84,8 @@
       border: 0px;
       color: white;
       background-color: blue;
-      height: 50px;width: 60px;
+      height: 40px;width: 100px;
+      border-radius: 6px;
     }
     .account{
       display: flex;

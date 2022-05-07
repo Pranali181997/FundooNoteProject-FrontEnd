@@ -11,6 +11,7 @@
     justify-content: center;
     display: flex;
     flex-flow: column wrap;
+    border-radius: 8px;
 }
 .designEmail
 {
@@ -46,7 +47,9 @@
   border: 0px;
   color: white;
   background-color: blue;
-  height: 50px;width: 60px;
+  height: 40px;width: 100px;
+  border-radius: 6px;
+    
 }
 .buttonStyleForForgot
 {
