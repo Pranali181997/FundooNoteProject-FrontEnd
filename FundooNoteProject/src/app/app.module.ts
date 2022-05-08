@@ -8,10 +8,11 @@ import { LogInComponent } from './component/log-in/log-in.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
- import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
+import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ChangePasswordComponent } from './component/change-password/change-password.component';
-//import { ChangePasswordComponent } from './component/change-password/change-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { ChangePasswordComponent } from './component/change-password/change-pass
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
