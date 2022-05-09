@@ -1,7 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="space-between center">
     <div class="borderStyle">
-        <div style=" width: 60%;" fxLayout="column" fxLayoutAlign="space-between left" fxClass-xs="column"
-            ngClass.xs="register-xs">
+        <div style=" width: 60%;" fxLayout="column" fxLayoutAlign="space-between left">
             <form [formGroup]="registerForm " (ngSubmit)="onSubmit()">
             <!-- <div class="flexitem"> -->
                 <h1>
@@ -31,7 +30,7 @@
                 </mat-form-field>
             </div>
 
-            <div fxLayout="column" fxLayoutAlign="stretch" fxClass-xs="column" ngClass.xs="fxClass-xs">
+            <div fxLayout="column" fxLayoutAlign="stretch">
                 <mat-form-field class="widthforBox" appearance="outline">
                     <mat-label>Username</mat-label>
                     <input matInput placeholder="Email" formControlName="email">
@@ -46,7 +45,7 @@
             </div>
 
             <div fxClass-xs="column" ngClass.xs="fxClass-xs">
-                <div class="Spaces" fxClass-xs="column" ngClass.xs="fxClass-xs">
+                <div class="Spaces" fxClass-xs="column" >
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
                         <input matInput placeholder="Password" formControlName="password">
@@ -58,16 +57,21 @@
                             formControlName="confirmPassword">
                         <mat-error>Password not match</mat-error>
                     </mat-form-field>
+                    <div fxLayout="column" fxLayoutAlign="stretch">
+                        <mat-form-field class="widthforBox" appearance="outline">
+                            <mat-label>adress</mat-label>
+                            <input matInput type="adress" placeholder="adress"
+                                formControlName="adress">    
+                        </mat-form-field>
+                    </div>
                 </div>
-
                 <mat-hint style="font-size: small;padding-left: 14px;">Use 8 or more characters with a mix of letters,
                     numbers & symbols </mat-hint>
                 <div class="ShowCheckbox">
                     <input type="checkbox" id="icon">Show password
                     <!-- <mat-checkbox type="checkbox" style="margin-top: 20px;" (click)="passChange();">Show password</mat-checkbox> -->
                 </div>
-
-                <div class="Spacesforbutton" fxClass-xs="column" ngClass.xs="fxClass-xs">
+                <div class="Spacesforbutton" fxClass-xs="column">
                     <button class="buttonStyle" routerLink="/log-in">Sign in instead</button>
                     <button mat-button class="buttonStyleforNext">Next</button>
                 </div>
