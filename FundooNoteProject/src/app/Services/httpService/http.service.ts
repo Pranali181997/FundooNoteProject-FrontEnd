@@ -1,6 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-//import { url } from 'inspector';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +17,9 @@ export class HttpService {
     // console.log("inside http service" ,reqdata,token,httpOptions)
    return this.http.post(url,reqdata,token && httpOptions)
   }
-  putService(){
-
+  
+  putService(url:any,payload:any,token:boolean=false,httpOptions:any){
+    return this.http.put(url,payload,token && httpOptions)
   }
   getService(){
     

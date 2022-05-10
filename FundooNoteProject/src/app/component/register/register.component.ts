@@ -20,11 +20,10 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
-      adress: ['', Validators.required],
+     // adress: ['', Validators.required],
   });
   }
   onSubmit() {
-
 console.log("inside submit")
 if(this.registerForm.valid){
   console.log("valid data",this.registerForm.value);
@@ -32,13 +31,17 @@ if(this.registerForm.valid){
     firstName:this.registerForm.value.firstName,
       lastName: this.registerForm.value.lastName,  
       email: this.registerForm.value.email,
+      adress: this.registerForm.value.adress,
       password: this.registerForm.value.password,
-      confirmPassword: this.registerForm.value.confirmPassword,
-      adress: this.registerForm.value.adress
+      
+      confirmPassword: this.registerForm.value.confirmPassword
+      
   }
   this.user.registration(data).subscribe((res:any)=>{
-console.log(res);
+  console.log(res);
 })
+}
+else{
   console.log("Invalid data",this.registerForm.value);
 }
   }
