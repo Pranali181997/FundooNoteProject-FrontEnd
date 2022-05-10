@@ -23,24 +23,24 @@ export class LogInComponent implements OnInit {
   });
    
   }
-  onSubmit() {
-    this.submitted=true;
-    console.log("inside submit")
-    if(this.LoginForm.valid){
-      console.log("valid data",this.LoginForm.value);
-      let data={
- 
-          Email: this.LoginForm.value.Email,
-        
-          Password: this.LoginForm.value.Password,     
+    onSubmit() {
+      this.submitted=true;
+      console.log("inside submit")
+      if(this.LoginForm.valid){
+        console.log("valid data",this.LoginForm.value);
+        let data={
+  
+            Email: this.LoginForm.value.Email,
+          
+            Password: this.LoginForm.value.Password,     
+        }
+        //console.log("helllooo")
+        this.user.login(data).subscribe((res:any)=>{
+        console.log(res);
+      })
       }
-      //console.log("helllooo")
-      this.user.login(data).subscribe((res:any)=>{
-      console.log(res);
-    })
-    }
-    else{
-      console.log("Invalid data",this.LoginForm.value);
-    }
+      else{
+        console.log("Invalid data",this.LoginForm.value);
       }
-    }
+        }
+      }

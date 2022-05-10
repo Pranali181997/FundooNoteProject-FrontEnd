@@ -31,5 +31,14 @@ login(data:any){
 return this.httpService.postService(this.base+`User/Login/${data.Email}/${data.Password}`, {} ,false,header)
 
 }
+ForgetPassword(data:any){
+  let header={
+    headers:new HttpHeaders({
+      'content-type': 'application/json'
+    })
+  }
+return this.httpService.postService(this.base+`User/ForgetPassword/${data.email}`, {} ,false,header)
+
+}
 }
 
