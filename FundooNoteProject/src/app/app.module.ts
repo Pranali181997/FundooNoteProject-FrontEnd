@@ -13,6 +13,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ChangePasswordComponent } from './component/change-password/change-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashBoardComponent } from './component/dash-board/dash-board.component';
+import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
+import { IconsComponent } from './component/icons/icons.component';
+import { TakeNoteComponent } from './component/take-note/take-note.component';
+import { DisplayComponent } from './component/display/display.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import{MatListModule} from '@angular/material/list'; 
+import {MatIconModule} from '@angular/material/icon';
+import { CreateNoteComponent } from './component/create-note/create-note.component';
+import { ArchiveComponent } from './component/archive/archive.component';
+import { TrashComponent } from './component/trash/trash.component'; 
 
 @NgModule({
   declarations: [
@@ -20,9 +32,16 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     LogInComponent,
     ForgetPasswordComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    DashBoardComponent,
+    GetAllNotesComponent,
+    IconsComponent,
+    TakeNoteComponent,
+    DisplayComponent,
+    CreateNoteComponent,
+    ArchiveComponent,
+    TrashComponent
   
-    // ResetPasswordComponent, ChangePasswordComponent, ForgetPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,8 +51,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

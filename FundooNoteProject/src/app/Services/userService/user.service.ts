@@ -1,5 +1,6 @@
 
 import { HttpHeaders } from '@angular/common/http';
+import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpService } from '../httpService/http.service';
@@ -38,6 +39,17 @@ ForgetPassword(data:any){
     })
   }
 return this.httpService.postService(this.base+`User/ForgetPassword/${data.email}`, {} ,false,header)
+
+}
+token:any
+ChangePassword(data:any){
+  let header={
+    headers:new HttpHeaders({
+      'content-type': 'application/json',
+      'Authorization':'Bearer '+ this.token
+    })
+  }
+return this.httpService.putService(this.base+`User/ChangePassword/${data.password}/${data.confirmpassword}`, {} ,false,header)
 
 }
 }

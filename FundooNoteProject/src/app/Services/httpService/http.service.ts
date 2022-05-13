@@ -18,9 +18,9 @@ export class HttpService {
    return this.http.post(url,reqdata,token && httpOptions)
   }
   
-  // putService(url:any,payload:any,token:boolean=false,httpOptions:any){
-  //   return this.http.put(url,payload,token && httpOptions)
-  // }
+  putService(url:any,payload:any,token:boolean=true,httpOptions:any){
+    return this.http.put(url,payload,token && httpOptions)
+  }
   getService(){
     
   }
