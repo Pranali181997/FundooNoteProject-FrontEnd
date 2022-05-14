@@ -20,11 +20,12 @@ import { TakeNoteComponent } from './component/take-note/take-note.component';
 import { DisplayComponent } from './component/display/display.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import{MatListModule} from '@angular/material/list'; 
+import {MatListModule} from '@angular/material/list'; 
 import {MatIconModule} from '@angular/material/icon';
 import { CreateNoteComponent } from './component/create-note/create-note.component';
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component'; 
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { TrashComponent } from './component/trash/trash.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

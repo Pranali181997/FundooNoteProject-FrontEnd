@@ -41,15 +41,16 @@ ForgetPassword(data:any){
 return this.httpService.postService(this.base+`User/ForgetPassword/${data.email}`, {} ,false,header)
 
 }
-token:any
-ChangePassword(data:any){
+
+ChangePassword(data:any,token:any){
   let header={
     headers:new HttpHeaders({
       'content-type': 'application/json',
-      'Authorization':'Bearer '+ this.token
+      'Authorization':`Bearer ${token}`
     })
   }
-return this.httpService.putService(this.base+`User/ChangePassword/${data.password}/${data.confirmpassword}`, {} ,false,header)
+return this.httpService.putService(this.base+`User/ChangePassword/${data.password}/${data.confirmpassword}`, {} ,true,header)
+//return this.httpService.putService(this.base+'User/ChangePassword',data,true,header)
 
 }
 }

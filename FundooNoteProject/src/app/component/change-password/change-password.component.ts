@@ -18,7 +18,7 @@ token:any
     this.ChangePasswordForm = this.formBuilder.group({
     
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
+      confirmpassword: ['', Validators.required],
     });
     this.token = this.activeRoute.snapshot.paramMap.get('token');
   }
@@ -32,7 +32,7 @@ token:any
         password: this.ChangePasswordForm.value.password,
         confirmpassword: this.ChangePasswordForm.value.confirmpassword
       }
-      this.user.ChangePassword  (data).subscribe((res: any) => {
+      this.user.ChangePassword(data,this.token).subscribe((res: any) => {
         console.log(res);
       })
     }

@@ -1,7 +1,4 @@
-// .xyz{
-//     width: 50%;
-//     border: 5px solid pink;
-// }
+
 .container{
 display: flex;
 justify-content:space-around;
@@ -25,7 +22,7 @@ padding: 50px;
     font-family:sans-serif;
     word-wrap:break-word;
     width: 150px; 
-   background-color: rgba(251, 246, 246, 0.961);
+    background-color: rgba(251, 246, 246, 0.961);
 }
 .close{
 margin-left: 150px;
@@ -47,5 +44,16 @@ button:focus {outline:none!important;}
 //opacity: 10;
 color:black
 }
-
+.border{
+    margin: auto;
+ }
+//  .takeNote{
+//  width: 600px;
+//  height: 100px;
+//  display: block;
+//  margin-left:200px;
+//  margin-top: 30px;
+//  margin-right:auto;  
+//  border-radius: 25px;
+//  }
 
