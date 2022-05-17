@@ -28,7 +28,7 @@ console.log("inside submit")
 if(this.registerForm.valid){
   console.log("valid data",this.registerForm.value);
   let data={
-    firstName:this.registerForm.value.firstName,
+      firstName:this.registerForm.value.firstName,
       lastName: this.registerForm.value.lastName,  
       email: this.registerForm.value.email,
       adress: this.registerForm.value.adress,

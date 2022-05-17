@@ -36,7 +36,8 @@ export class LogInComponent implements OnInit {
         }
         //console.log("helllooo")
         this.user.login(data).subscribe((res:any)=>{
-        console.log(res);
+        console.log(res.message);
+        localStorage.setItem(`token`,res.message)
       })
       }
       else{

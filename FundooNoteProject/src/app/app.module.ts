@@ -26,6 +26,7 @@ import { CreateNoteComponent } from './component/create-note/create-note.compone
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component'; 
 import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import {MatCardModule} from '@angular/material/card';
     CreateNoteComponent,
     ArchiveComponent,
     TrashComponent
-  
+   
   ],
   imports: [
     BrowserModule,
@@ -57,7 +58,8 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

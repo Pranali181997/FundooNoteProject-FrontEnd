@@ -1,1 +1,42 @@
-<p>display works!</p>
+<!-- <mat-card class="example-card" *ngFor="let note of recievedNoteList">
+   
+    <mat-card-header>
+        <mat-card-title>
+            
+            <button mat-card-icon style="margin-left: 130px;">
+                <img class="tick" src="../../../assets/push_pin_black_24dp.svg" alt="tickimg">
+            </button>
+        </mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quis, odit sunt dicta impedit sed repellat
+            cumque nobis placeat sequi mollitia sit praesentium nesciunt! Sit pariatur error quae odio quaerat?
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="row">
+         
+            <app-icons></app-icons>
+        </div>
+    </mat-card-actions>
+</mat-card> -->
+<div fxLayout="row wrap">
+    <div fxLayout="column" fxLayoutAlign="space-around center" class="noteDisplaySetting"
+        *ngFor="let note of recievedNoteList">
+
+        <div class="notes">
+            <p style="font-size: medium;font: bold;margin-left: -100px;"> {{note.title}}</p>
+            <p style="margin-left: -100px;"> {{note.description}}</p>
+            <p style="margin-left: -100px;">
+                {{note.data}}
+            </p>
+        </div>
+
+        <div style="margin-left:4px;">
+            <app-icons class="allicons"></app-icons>
+        </div>
+
+    </div>
+</div>

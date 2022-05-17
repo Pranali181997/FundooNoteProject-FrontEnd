@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: row;
   border: 1px solid gray;
-  width: 60%;
+  width: 70%;
   margin-top: 30px;
   margin-left:100px ;
   //margin: 30px 100px 25px;
@@ -51,7 +51,8 @@
 .Spacesforbutton 
 {
   display: flex;
-  gap: 5px 180px;
+  gap: 5px 150px;
+
   width: 490px;
   color: blue;
   margin-top: 60px;
@@ -70,14 +71,16 @@
    .spacebetweenUpDown
    {
      display: flex;
-    column-gap: 100px;
+   // column-gap: 100px;
    }
    .buttonStyle
    {
+    display: flex;
      border: 0px;
      background-color: white;
      color: blue;
      font-size: medium;
+    
    }
    .buttonStyleforNext
     {
@@ -90,7 +93,7 @@
     .account{
       display: flex;
       flex-direction: column;
-      margin-left: 50px;
+      margin-left: 30px;
       border: 60px;
       font-size: medium;
       align-items:center;
