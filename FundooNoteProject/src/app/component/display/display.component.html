@@ -35,7 +35,7 @@
             </p>
         </div>
         <div style="margin-left:4px;">
-            <app-icons class="allicons"></app-icons>
+            <app-icons (archiveEvent)="archiveMessage($event)" (deleteEvent)="deleteMessage($event)" class="allicons" [notedata]="note"> </app-icons>
         </div>
     </div>
 </div>

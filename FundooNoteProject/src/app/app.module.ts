@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashBoardComponent } from './component/dash-board/dash-board.component';
 import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
 import { IconsComponent } from './component/icons/icons.component';
-import { TakeNoteComponent } from './component/take-note/take-note.component';
 import { DisplayComponent } from './component/display/display.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -29,6 +28,8 @@ import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { UpdateComponent } from './component/update/update.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -40,13 +41,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     DashBoardComponent,
     GetAllNotesComponent,
     IconsComponent,
-    TakeNoteComponent,
     DisplayComponent,
     CreateNoteComponent,
     ArchiveComponent,
     TrashComponent,
     UpdateComponent
-   
   ],
   imports: [
     BrowserModule,
@@ -63,7 +62,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatCardModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

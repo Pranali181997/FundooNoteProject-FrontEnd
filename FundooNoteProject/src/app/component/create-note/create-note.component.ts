@@ -35,6 +35,5 @@ export class CreateNoteComponent implements OnInit {
       console.log(result);
       this.messageEvent.emit("Hello")
     })
-
   }
 }

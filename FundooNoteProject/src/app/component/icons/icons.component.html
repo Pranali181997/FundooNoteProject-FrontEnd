@@ -1,20 +1,27 @@
+<div class="icons" fxLayout="row">
 
-    <div class="flex" fxLayout="row">
-        
-            <img class="icon" src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="Remind Me">
-            
-                <img class="icon" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="Collabarator">
-            
-                <img class="icon" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="Collabarator">
-            
-                <img class="icon" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image">
-            
-            
+        <img class="icon" src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="Remind Me">
+
+        <img class="icon" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="Collabarator">
+
+        <img class="icon" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="color">
+
+        <img class="icon" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image">
+
+
+        <div (click)="archive()">
                 <img class="icon" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="archive">
-                  
-            
-                <img class="icon" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="more">
-                   
-    </div>
+        </div>
+
+        <button mat-button [matMenuTriggerFor]="menu"><img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" width="20px" height="20px"></button>
+     <mat-menu #menu="matMenu">
+     <button mat-menu-item (click)="delete()">Delete note</button>
+     <button mat-menu-item>Change labels</button>
+     <button mat-menu-item>Add drawing</button>
+     <button mat-menu-item>Make a copy</button>
+     <button mat-menu-item>Show checkboxes</button>
+     <button mat-menu-item>Copy to google Docs</button>
+     </mat-menu> 
+
 
 
