@@ -27,16 +27,15 @@
         *ngFor="let note of recievedNoteList">
 
         <div class="notes">
-            <p style="font-size: medium;font: bold;margin-left: -100px;"> {{note.title}}</p>
-            <p style="margin-left: -100px;"> {{note.description}}</p>
+            <p (click)="openDialog(note)" style="font-size: medium;font: bold;margin-left: -100px;"> {{note.title}}</p>
+            <p (click)="openDialog(note)" style="margin-left: -100px;"> {{note.description}}</p>
+
             <p style="margin-left: -100px;">
                 {{note.data}}
             </p>
         </div>
-
         <div style="margin-left:4px;">
             <app-icons class="allicons"></app-icons>
         </div>
-
     </div>
 </div>

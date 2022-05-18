@@ -27,6 +27,8 @@ import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component'; 
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import { UpdateComponent } from './component/update/update.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     DisplayComponent,
     CreateNoteComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    UpdateComponent
    
   ],
   imports: [
@@ -59,7 +62,8 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatIconModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

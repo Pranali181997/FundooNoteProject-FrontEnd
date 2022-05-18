@@ -1,4 +1,4 @@
 <!-- <app-create-note></app-create-note>
 <app-display></app-display> -->
-<app-create-note></app-create-note>
+<app-create-note (messageEvent)="recieveMessage($event)"></app-create-note>
 <app-display [recievedNoteList]="noteList"></app-display>

@@ -13,10 +13,13 @@ export class GetAllNotesComponent implements OnInit {
   ngOnInit(): void {
     this.GetAllNotes();
   }
-GetAllNotes(){
+ GetAllNotes(){
     this.note.getNote().subscribe((response:any)=>{
       console.log(response);
       this.noteList=response.data;
     }
   )}
+  recieveMessage(event:any){
+    this.GetAllNotes();
+  }
 }
