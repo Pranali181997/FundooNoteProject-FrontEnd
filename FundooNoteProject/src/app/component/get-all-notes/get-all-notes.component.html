@@ -1,6 +1,6 @@
 <!-- <app-create-note></app-create-note>
 <app-display></app-display> -->
 <app-create-note (messageEvent)="recieveMessage($event)"></app-create-note>
-<app-display [recievedNoteList]="noteList"(updateEvent)="updateMessage($event)" (archiveEvent)="archiveMessage($event)" (deleteEvent)="deleteMessage($event)"></app-display>
+<app-display [recievedNoteList]="noteList"(updateEvent)="updateMessage($event)" (archiveEvent)="archiveMessage($event)" (trashEvent)="trashMessage($event)" (archiveEvent)="archiveMessage($event)" (deleteEvent)="deleteMessage($event)"></app-display>
 
 

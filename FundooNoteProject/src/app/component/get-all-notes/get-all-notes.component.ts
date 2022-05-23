@@ -18,6 +18,7 @@ export class GetAllNotesComponent implements OnInit {
       console.log(response);
       this.noteList = response.data; 
       this.noteList = this.noteList.filter((object:any)=>{
+      
         return object.isArchive===false && object.isTrash===false
       })  
     }
@@ -33,6 +34,9 @@ export class GetAllNotesComponent implements OnInit {
     this.GetAllNotes();
   }
   deleteMessage(event: any) {
+    this.GetAllNotes();
+  }
+  trashMessage(event: any) {
     this.GetAllNotes();
   }
 }

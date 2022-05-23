@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/userService/user.service';
 import { ActivatedRoute } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-change-password',
@@ -12,7 +13,7 @@ export class ChangePasswordComponent implements OnInit {
   ChangePasswordForm !: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private user: UserService, private activeRoute:ActivatedRoute) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService, private activeRoute:ActivatedRoute,private _snackBar: MatSnackBar) { }
 token:any
   ngOnInit(): void {
     this.ChangePasswordForm = this.formBuilder.group({
@@ -34,7 +35,18 @@ token:any
       }
       this.user.ChangePassword(data,this.token).subscribe((res: any) => {
         console.log(res);
-      })
+        this._snackBar.open('Password changed successfully..', '', {
+          duration: 3000,
+          verticalPosition: 'bottom'
+        })
+      },error=>{
+        this._snackBar.open('Failed to change password', '', {
+        duration: 2000,
+        verticalPosition: 'bottom'
+
+        });
+      }
+      )
     }
     else {
       console.log("Invalid data", this.ChangePasswordForm.value);

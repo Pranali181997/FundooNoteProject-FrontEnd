@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/Services/note/note.service';
 
 @Component({
@@ -8,9 +9,10 @@ import { NoteService } from 'src/app/Services/note/note.service';
 })
 export class ArchiveComponent implements OnInit {
 noteList:any
-  constructor(private note:NoteService) { }
+  constructor(private note:NoteService,private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.GetAllNotes();
   }
   GetAllNotes(){
     this.note.getNote().subscribe((response:any)=>{
@@ -18,7 +20,11 @@ noteList:any
       this.noteList=response.data;
       this.noteList = this.noteList.filter((object:any)=>{
         return object.isArchive===true && object.isTrash===false
+
       })
     })
+  }
+  archiveMessage(event: any) {
+    this.GetAllNotes();
   }
 }

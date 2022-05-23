@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/Services/note/note.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class CreateNoteComponent implements OnInit {
   title: any
   description: any
   @Output() messageEvent = new EventEmitter<string>();
-  constructor(private note: NoteService) { }
+  constructor(private note: NoteService,private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -31,9 +32,18 @@ export class CreateNoteComponent implements OnInit {
       "isTrash": true,
       "registerdDate": "2022-05-17T06:11:22.623Z"
     }
-    this.note.addNote(data).subscribe((result:any)=>{
+    this.note.addNote(data).subscribe((result: any) => {
       console.log(result);
       this.messageEvent.emit("Hello")
+      this._snackBar.open('Note Created successfully', '', {
+        duration: 3000,
+        verticalPosition: 'bottom'
+      })
+    }, error => this._snackBar.open('Both Title and Description should not be empty', '', {
+      duration: 3000,
+      verticalPosition: 'bottom'
     })
+    )
   }
 }
+

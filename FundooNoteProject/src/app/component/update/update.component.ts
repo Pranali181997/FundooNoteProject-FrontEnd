@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/Services/note/note.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class UpdateComponent implements OnInit {
   updateMessage="note refresh"
 
 
-  constructor(private note: NoteService, public dialogRef: MatDialogRef<UpdateComponent>,
+  constructor(private _snackBar: MatSnackBar,private note: NoteService, public dialogRef: MatDialogRef<UpdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
   title: any
   description: any
@@ -38,7 +39,18 @@ export class UpdateComponent implements OnInit {
     {
       console.log("update response=", res);
       this.dialogRef.close(res);
-    })
+      this._snackBar.open('Note updated successfully', '', {
+        duration: 3000,
+        verticalPosition: 'bottom'
+      })
+    },error=>{
+      this._snackBar.open('Failed to update', '', {
+      duration: 2000,
+      verticalPosition: 'bottom'
+
+      });
+    }
+    ) 
   }
   receiveMessage($event:any){
     this.onNoClick()

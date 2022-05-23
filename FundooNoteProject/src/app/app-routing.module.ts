@@ -10,6 +10,7 @@ import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.co
 import { LogInComponent } from './component/log-in/log-in.component';
 import { RegisterComponent } from './component/register/register.component';
 import { TrashComponent } from './component/trash/trash.component';
+import { AuthenticationGuard } from './guard/authentication.guard';
 
 const routes: Routes = [
   {path: `register`,component:RegisterComponent},

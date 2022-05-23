@@ -30,6 +30,10 @@ import { UpdateComponent } from './component/update/update.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 import {MatMenuModule} from '@angular/material/menu';
+import { AuthguardServiceService } from './Services/authGuard/authguard-service.service';
+
+import {Routes, RouterModule } from '@angular/router'; 
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,7 @@ import {MatMenuModule} from '@angular/material/menu';
     ArchiveComponent,
     TrashComponent,
     UpdateComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -64,9 +69,10 @@ import {MatMenuModule} from '@angular/material/menu';
     FormsModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatGridListModule
   ],
-  providers: [],
+  providers: [AuthguardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
