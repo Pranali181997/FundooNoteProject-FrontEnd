@@ -39,4 +39,5 @@ export class GetAllNotesComponent implements OnInit {
   trashMessage(event: any) {
     this.GetAllNotes();
   }
+  
 }

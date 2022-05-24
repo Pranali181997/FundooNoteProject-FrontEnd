@@ -16,7 +16,7 @@ export class DisplayComponent implements OnInit {
   @Output() deleteEvent = new EventEmitter<any>();
   @Output() trashEvent = new EventEmitter<any>();
   displayMessage="note refresh"
-
+  filteredString: string = '';
   constructor(public dialog:MatDialog) {
     
   }
@@ -49,6 +49,10 @@ export class DisplayComponent implements OnInit {
       this.deleteEvent.emit("hello")     
     }
     trashMessage(event:any)
+    { 
+      this.trashEvent.emit("hello")     
+    }
+    updateMessage(event:any)
     { 
       this.trashEvent.emit("hello")     
     }

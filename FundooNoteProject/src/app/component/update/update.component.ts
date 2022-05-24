@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 import { NoteService } from 'src/app/Services/note/note.service';
 
 @Component({
@@ -9,14 +10,14 @@ import { NoteService } from 'src/app/Services/note/note.service';
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent implements OnInit {
-  updateMessage="note refresh"
+  updateMessage="note refresh";
+ 
 
-
-  constructor(private _snackBar: MatSnackBar,private note: NoteService, public dialogRef: MatDialogRef<UpdateComponent>,
+  constructor(private _snackBar: MatSnackBar,public note: NoteService, public dialogRef: MatDialogRef<UpdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
   title: any
   description: any
-
+ 
 
   ngOnInit(): void {
     this.title = this.data.title;
@@ -28,7 +29,7 @@ export class UpdateComponent implements OnInit {
     {
       "title": this.title,
       "description": this.description,
-      "bgColor": "string",
+      "bgColor": "",
       "isArchive": false,
       "isReminder": false,
       "isPin": false,
@@ -54,5 +55,8 @@ export class UpdateComponent implements OnInit {
   }
   receiveMessage($event:any){
     this.onNoClick()
+  }
+  trashMessage(event:any){
+    this.data.bgColor=event;
   }
 }

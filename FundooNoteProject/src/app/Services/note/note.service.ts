@@ -78,7 +78,6 @@ export class NoteService {
    changeColor( noteId: any,color:any) {
 
     console.log("token", this.token)
-
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json-patch+json',

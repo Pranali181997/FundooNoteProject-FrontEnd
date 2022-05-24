@@ -13,8 +13,11 @@
     </div>
     <div class="wholesearchbox" ngClass.xs="div_wrraper-xs" ngClass.md="div_wrraper-md" ngClass.sm="div_wrraper-sm">
       <img style="margin-left: 10px; height: 30px;" src="../../../assets/search_FILL0_wght400_GRAD0_opsz48.svg">
-      <input class="inputSearchbox" type="text" placeholder="Search" (keyup)="filter($event)">
-    </div>
+     <!-- <div *ngFor="let note of users | filter:filterdString" > -->
+
+       <input class="inputSearchbox" type="text" placeholder="Search" (keyup)="keyFun($event)" >
+     </div>
+    <!-- </div> -->
     <div class="nav">
       <button style="border: 0px;background-color: white; padding-left: 30px;"><img
           style="padding-top: 10px;block-size:35px;"
@@ -37,7 +40,6 @@
       <button class="button"><img style="padding-top:12px margin-left=50px;block-size:35px;margin-top: 12px;"
           src="../../../assets/person_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>
-
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">

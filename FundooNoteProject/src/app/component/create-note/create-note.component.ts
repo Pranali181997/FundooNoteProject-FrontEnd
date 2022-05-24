@@ -26,14 +26,14 @@ export class CreateNoteComponent implements OnInit {
       "title": this.title,
       "description": this.description,
       "bgColor": "red",
-      "isArchive": true,
-      "isReminder": true,
-      "isPin": true,
-      "isTrash": true,
+      "isArchive": false,
+      "isReminder": false,
+      "isPin": false,
+      "isTrash": false,
       "registerdDate": "2022-05-17T06:11:22.623Z"
     }
     this.note.addNote(data).subscribe((result: any) => {
-      console.log(result);
+      console.log("result" ,result);
       this.messageEvent.emit("Hello")
       this._snackBar.open('Note Created successfully', '', {
         duration: 3000,

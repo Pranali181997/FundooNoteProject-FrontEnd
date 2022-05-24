@@ -6,13 +6,8 @@ import { Router } from '@angular/router';
 })
 export class AuthguardServiceService {
 
-  constructor(private Authguardservice: AuthguardServiceService, private router: Router) {}  
-canActivate(): boolean {  
-    if (!this.Authguardservice.gettoken()) {  
-        this.router.navigateByUrl("/login");  
-    }  
-    return this.Authguardservice.gettoken();  
-} 
+  constructor() {}  
+
   gettoken(){
     return !!localStorage.getItem("token");
   }

@@ -5,10 +5,6 @@
             <img src="../../../assets/push_pin_black_24dp.svg" alt="pin">
 
         </div>
-
-        <!-- <div *ngIf="!isShow || isShow" (click)="show()">
-            <input class="takenote" style="width: 99%;" placeholder="Take a note ..." [(ngModel)]="description">
-        -->
         <div>
         <div  *ngIf="!isShow || isShow" (click)="show()" fxLayout="row">
             <input class="takenote" style="width: 99%;" placeholder="Take a note ..." [(ngModel)]="description">
@@ -18,13 +14,12 @@
                 <img style="height: 20px;width: 20px; padding-top: 8px; padding-left: 8px;"
                     src="../../../assets/brush_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                 <img style="height: 20px;width: 20px; padding-top: 8px; padding-left: 8px;"
-                    src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-                
+                    src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">              
             </span>
         </div>
-        <div class="flex" *ngIf="isShow" fxLayout="row">
-            <div class="flex">
-                <app-icons></app-icons>
+        <div class="flex" *ngIf="isShow" >
+            <div class="noteDisplaySetting"  fxLayout="row">
+                <app-icons class="allicons"></app-icons>
                 <button class="close" (click)="close()">Close</button>
             </div>
         </div>
