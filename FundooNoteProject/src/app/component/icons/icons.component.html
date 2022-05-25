@@ -51,11 +51,11 @@
                     width="20px" height="20px"></div>
                     
                     <div class="imageSetting">
-                        <button class="icons" mat-button [matMenuTriggerFor]="background_color" style="border: 0px;background-color:transparent"><img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg"></button>
-                        <mat-menu #background_color="matMenu">
+                        <button class="icons" mat-button [matMenuTriggerFor]="background_color" style="border: 0px;background-color:transparent" matTooltip="bgcolor"><img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg"></button>
+                        <mat-menu #background_color="matMenu" >
                             <div style="display: flex;flex-flow: row wrap; width: 150px;">
                                 <div *ngFor="let color of colorArray" class="pallete">
-                                    <button class="icons" [style.background]="color?.name" (click)="changeColor(color?.name)"></button>
+                                    <button class="icons" mat-raised-button [matTooltip]="color.name" [style.background]="color?.name" (click)="changeColor(color?.name)"></button>
                                 </div>
                             </div>                         
                         </mat-menu>

@@ -11,9 +11,9 @@
                     {{note.data}} {{note.bgColor}}
                 </p> -->
             </div>
-            <div  style="margin-top: 100px">
-                <app-icons (archiveEvent)="archiveMessage($event)" (trashEvent)="trashMessage($event)"
-                    (deleteEvent)="deleteMessage($event)" class="allicons" [notedata]="note"> </app-icons>
+            <div class="flex" style="margin-top: 100px">
+                <app-icons  (archiveEvent)="archiveMessage($event)" (trashEvent)="trashMessage($event)"
+                    (deleteEvent)="deleteMessage($event)" (updateEvent)="updateMessage($event)" [notedata]="note"> </app-icons>
             </div>
         </div>
 

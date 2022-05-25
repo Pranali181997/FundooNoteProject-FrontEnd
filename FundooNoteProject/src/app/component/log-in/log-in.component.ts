@@ -33,7 +33,6 @@ export class LogInComponent implements OnInit {
     if (this.LoginForm.valid) {
       console.log("valid data", this.LoginForm.value);
       let data = {
-
         Email: this.LoginForm.value.Email,
 
         Password: this.LoginForm.value.Password,

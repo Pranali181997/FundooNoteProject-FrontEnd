@@ -4,7 +4,8 @@
   size: 20px;
   height: 20px;
   font-weight: 10000;
-  border:none
+  border:none;
+  border-radius: 800px;
 }
 .flex{
     display: flex;
@@ -19,11 +20,12 @@ button:focus {outline:none!important;}
 .pallete
 {
     width: 30px;
-    //border: 2px solid red;
+   // border: 0px solid black;
     height: 30px;
       display: flex;
      flex-wrap: wrap;
       flex-direction: row;
+
 }
 
 
